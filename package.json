@@ -1,0 +1,18 @@
+{
+  "name": "ncmb-script-gacha",
+  "version": "0.0.1",
+  "description": "NCMB sample sample implementation for Gacha",
+  "main": "hello.js",
+  "dependencies": {
+      "ncmb": "~2.1.0"
+  },
+  "devDependencies": {
+      "config": "*"
+      , "js-yaml": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "koyhoge",
+  "license": "ISC"
+}
