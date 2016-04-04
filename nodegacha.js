@@ -19,8 +19,14 @@ config.getItems()
     .then(function(params) {
 	var chooser = new Chooser(params);
 	var item = chooser.choose();
-	logger.log(userId, itemId, item);
-	console.log(item);
+
+	logger.log(userId, itemId, item)
+	    .then(function(result) {
+		console.log(item);
+	    })
+	    .catch(function(err) {
+		throw err;
+	    });
     })
     .catch(function(err) {
 	console.log(err.message);

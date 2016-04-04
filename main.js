@@ -22,12 +22,15 @@ module.exports = function(req, res) {
 	    var item = chooser.choose();
 
 	    var logger = new Logger(ncmb);
-	    logger.log(userId, itemId, item);
-
-	    res.send(item);
+	    logger.log(userId, itemId, item)
+		.then(function() {
+		    res.send(item);
+		})
+		.catch(function(err) {
+		    throw err;
+		});
 	})
 	.catch(function(err) {
 	    res.status(500).send(err.message);
 	});
-    ;
 }
