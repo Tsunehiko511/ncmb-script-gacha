@@ -3,7 +3,7 @@
 module.exports = function(req, res) {
     var NCMB = require('ncmb');
     var app_key = 'PLEASE PUT YOUR APP KEY HERE';
-    var client_key = 'PLEASE PUT YOUR CLIENT KEY HERE'
+    var client_key = 'PLEASE PUT YOUR CLIENT KEY HERE';
 
     if (req.query.user == undefined || req.query.item == undefined) {
 	res.status(400).send('Bad Request');
