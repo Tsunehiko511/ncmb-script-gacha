@@ -49,7 +49,7 @@ Chooser.prototype.numItems = function() {
 
 Chooser.prototype.reset = function() {
     this.items = [];
-    this.start = 0;
+    this.total = 0;
 }
 
 Chooser.prototype.choose = function() {
