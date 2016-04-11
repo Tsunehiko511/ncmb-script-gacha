@@ -24,13 +24,14 @@ Logger.prototype.updateCounter = function(itemId, item) {
 		    counter = new Counter;
 		    counter.set('id', itemId)
 			.set(item, 1)
-			.save();
+			.save()
+			.then(resolve);
 		} else {
 		    counter = results[0];
 		    counter.setIncrement(item, 1)
-			.update();
+			.update()
+			.then(resolve);
 		}
-		resolve();
 	    })
 	    .catch(function(err) {
 		reject(err);
