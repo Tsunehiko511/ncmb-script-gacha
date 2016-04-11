@@ -2,8 +2,8 @@
 
 Sample 'Gacha' script implement for Nifty-Cloud mobile backend.
 
-  Copyright (c) 2016  KOYAMA Tetsuji
-  This software is released under the MIT License, see LICENSE.txt.
+    Copyright (c) 2016  KOYAMA Tetsuji
+    This software is released under the MIT License, see LICENSE.txt.
 
 [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/) (NCMB) の[スクリプト](http://mb.cloud.nifty.com/function.htm#script)を用いた、ガチャ機能のサンプル実装です。
 
@@ -23,6 +23,13 @@ Sample 'Gacha' script implement for Nifty-Cloud mobile backend.
   * NCMBにアップロードした gacha.js を実行する Node のサンプル
 
 ## gacha.js の作成
+
+main.js の中に app_key, client_key を記述する部分がありますので、そこを自分のアプリのものに書き換えます。
+
+```javascript:main.js
+    var app_key = 'PLEASE PUT YOUR APP KEY HERE';
+    var client_key = 'PLEASE PUT YOUR CLIENT KEY HERE’;
+```
 
 NCMB にアップロードする gacha.js は上記のファイルに分かれて実装されていますので、以下のコマンドで一つにまとめて下さい。
 
